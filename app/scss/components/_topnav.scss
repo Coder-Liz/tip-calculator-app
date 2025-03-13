@@ -1,0 +1,21 @@
+@use '../util' as u;
+
+.topnav {
+  &__wrapper {
+    width: 100%;
+    padding-block: 50px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include u.breakpoint(large) {
+      padding-block: 163px 80px;
+    }
+  }
+
+  &__logo {
+    &:hover path {
+      fill: var(--strong-cyan);
+    }
+  }
+}
