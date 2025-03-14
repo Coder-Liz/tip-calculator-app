@@ -3,11 +3,13 @@
 
 //700px, 1024px
 $breakpoints-up: (
+  'small': f.em(600),
   'medium': f.em(768),
   'large': f.em(1024),
 );
 
 $breakpoints-down: (
+  'small': f.em(599.98),
   'medium': f.em(767.98),
   'large': f.em(1023.98),
 );

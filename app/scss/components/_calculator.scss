@@ -13,8 +13,14 @@
     gap: 32px;
     border-radius: 15px;
 
+    @include u.breakpoint(small) {
+      width: min(100% - 3rem, u.rem(600));
+      margin-inline: auto;
+    }
+
     @include u.breakpoint(large) {
-      width: min(100% - 32.5rem, u.rem(920));
+      width: min(100% - 32.5rem);
+      width: u.rem(920);
       margin-inline: auto;
       display: flex;
       justify-content: space-between;
