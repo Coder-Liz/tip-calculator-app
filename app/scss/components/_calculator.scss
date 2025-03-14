@@ -74,6 +74,10 @@
     &.number::before {
       background-image: url('/img/icon-person.svg');
     }
+
+    &.number {
+      display: inline-block;
+    }
   }
 
   &__input-bill,
@@ -117,20 +121,47 @@
     padding: 12px 0;
     border: none;
     border-radius: 8px;
+    transition: background-color 150ms ease-in-out;
 
     &.very-dark-cyan {
       background-color: var(--very-dark-cyan);
       color: var(--white);
-    }
 
-    &.strong-cyan {
-      background-color: var(--strong-cyan);
-      color: var(--very-dark-cyan);
-    }
+      &:where(.active, :hover, :focus-within, :focus-visible) {
+        background-color: var(--strong-cyan);
+        color: var(--very-dark-cyan);
+      }
 
-    &.very-light-grayish-cyan {
-      background-color: var(--very-light-grayish-cyan);
+      &:focus-visible {
+        outline: 2px solid var(--strong-cyan);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &__custom-tip {
+    font: inherit;
+    font-size: 24px;
+    line-height: 1;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    border-radius: 5px;
+    border: none;
+    padding: 9.5px;
+    text-align: right;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
       color: var(--dark-grayish-cyan);
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &:focus {
+      border: 2px solid var(--very-dark-cyan);
     }
   }
 
@@ -206,4 +237,13 @@
       background-color: var(--reset-btn-hover);
     }
   }
+}
+
+#error-message {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  color: red;
+  font-size: 12px;
+  display: none;
 }
