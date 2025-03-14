@@ -131,11 +131,6 @@
         background-color: var(--strong-cyan);
         color: var(--very-dark-cyan);
       }
-
-      &:focus-visible {
-        outline: 2px solid var(--strong-cyan);
-        outline-offset: 2px;
-      }
     }
   }
 
@@ -160,7 +155,7 @@
       text-align: center;
     }
 
-    &:focus {
+    &:where(.active, :focus-visible) {
       border: 2px solid var(--very-dark-cyan);
     }
   }
