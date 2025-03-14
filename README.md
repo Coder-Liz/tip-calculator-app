@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/tip-calculator-app-TSqOu-BSah)
 - Live Site URL: [Add live site URL here](https://sparkly-kangaroo-4a10d5.netlify.app/)
 
 ## My process
